@@ -66,7 +66,14 @@ describe('Bank Contract', function () {
     expect(balance).to.equal(ethers.utils.parseEther('1000'));
   });
 
-  it('Deposit in fixed deposit', async function () {
+  it('Transfer Tokens to Account 3', async function () {
+    await token.transfer(accounts[3].address, ethers.utils.parseEther('2000'));
+
+    balance = await token.balanceOf(accounts[3].address);
+    expect(balance).to.equal(ethers.utils.parseEther('2000'));
+  });
+
+  it('Deposit in fixed deposit Account 2', async function () {
     await token
       .connect(accounts[2])
       .approve(bankContract.address, ethers.utils.parseEther('1000000'));
@@ -77,6 +84,19 @@ describe('Bank Contract', function () {
 
     const userInfo = await bankContract.userInfo(accounts[2].address);
     expect(userInfo.amountDeposited).to.equal(ethers.utils.parseEther('1000'));
+  });
+
+  it('Deposit in fixed deposit Account 3', async function () {
+    await token
+      .connect(accounts[3])
+      .approve(bankContract.address, ethers.utils.parseEther('1000000'));
+
+    await bankContract
+      .connect(accounts[3])
+      .deposit(ethers.utils.parseEther('2000'), 6);
+
+    const userInfo = await bankContract.userInfo(accounts[3].address);
+    expect(userInfo.amountDeposited).to.equal(ethers.utils.parseEther('2000'));
   });
 
   it('Calculate Rewards after 1 month', async function () {
@@ -122,9 +142,15 @@ describe('Bank Contract', function () {
     expect(rewards).to.equal(ethers.utils.parseEther('60'));
   });
 
-  it('Withdraw', async function () {
+  it('Withdraw Account 2', async function () {
     await bankContract.connect(accounts[2]).withdraw();
     balance = await token.balanceOf(accounts[2].address);
     expect(balance).to.equal(ethers.utils.parseEther('1060'));
+  });
+
+  it('Emergency Withdraw Account 3', async function () {
+    await bankContract.connect(accounts[3]).emergencyWithdraw();
+    balance = await token.balanceOf(accounts[3].address);
+    expect(balance).to.equal(ethers.utils.parseEther('2000'));
   });
 });
