@@ -1,4 +1,4 @@
-# FIXED BOND CONTRACT DEPLOYED
+# BANK CONTRACT DEPLOYED
 
 <a href="https://kovan.etherscan.io/address/0x29E07d47AEBD4da5F4d21aBDe50D672C4923F662#code">https://kovan.etherscan.io/address/0x29E07d47AEBD4da5F4d21aBDe50D672C4923F662#code</a>
 

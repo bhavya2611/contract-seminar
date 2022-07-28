@@ -36,10 +36,10 @@ describe('Bank Contract', function () {
   it('Setup Fixed Deposit', async function () {
     await bankContract.setupFixedDeposit(
       true,
-      3,
+      1,
       6,
-      9,
-      12,
+      15,
+      24,
       ethers.utils.parseEther('100')
     );
 
