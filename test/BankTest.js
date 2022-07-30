@@ -148,6 +148,14 @@ describe('Bank Contract', function () {
     expect(balance).to.equal(ethers.utils.parseEther('1060'));
   });
 
+  it('Calculate Rewards after 4 months for Account 3', async function () {
+    const rewards = await bankContract.calculateRewards(
+      accounts[3].address
+    );
+
+    expect(rewards).to.equal(ethers.utils.parseEther('200'));
+  });
+
   it('Emergency Withdraw Account 3', async function () {
     await bankContract.connect(accounts[3]).emergencyWithdraw();
     balance = await token.balanceOf(accounts[3].address);

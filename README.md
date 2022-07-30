@@ -1,10 +1,10 @@
 # BANK CONTRACT DEPLOYED
 
-<a href="https://kovan.etherscan.io/address/0x29E07d47AEBD4da5F4d21aBDe50D672C4923F662#code">https://kovan.etherscan.io/address/0x29E07d47AEBD4da5F4d21aBDe50D672C4923F662#code</a>
+<a href="https://kovan.etherscan.io/address/0x3cdE4C9b26CC2b746ad13B402486445F1AcdCF50#code">https://kovan.etherscan.io/address/0x3cdE4C9b26CC2b746ad13B402486445F1AcdCF50#code</a>
 
 # TOKEN CONTRACT DEPLOYED
 
-<a href="https://kovan.etherscan.io/address/0x031BB2a1c7Ba20dE89b1D149C9faf1e52d084565#code">https://kovan.etherscan.io/address/0x031BB2a1c7Ba20dE89b1D149C9faf1e52d084565#code</a>
+<a href="https://kovan.etherscan.io/address/0x9Eb3E2dC2c91130C32A96434e52FdfE248536C30#code">https://kovan.etherscan.io/address/0x9Eb3E2dC2c91130C32A96434e52FdfE248536C30#code</a>
 
 # INSTALL DEPENDENCIES
 

@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 // @title A contract to simulate Real World FixedDeposits / Fixed Deposits
-// @author Marvel
+// @author Bhavya
 // @notice You can use this contract for only the most basic simulation
 // @dev All function calls are currently implemented without side effects
 // @custom:experimental This is an experimental contract.
