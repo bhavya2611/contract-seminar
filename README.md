@@ -42,13 +42,13 @@ Adjust the contract deployment settings!
 To get the Etherscan API key, go to
 <a href="https://etherscan.io/myapikey"> https://etherscan.io/myapikey</a>
 
-# DEPLOY ON TESTNET
+## DEPLOY ON TESTNET
 
 ```shell
 npm run deploy:test
 ```
 
-# DEPLOY ON MAINNET
+## DEPLOY ON MAINNET
 
 ```shell
 npm run deploy:main
