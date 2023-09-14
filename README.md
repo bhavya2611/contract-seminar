@@ -1,10 +1,10 @@
 ## BANK CONTRACT DEPLOYED
 
-<a href="https://kovan.etherscan.io/address/0x3cdE4C9b26CC2b746ad13B402486445F1AcdCF50#code">https://kovan.etherscan.io/address/0x3cdE4C9b26CC2b746ad13B402486445F1AcdCF50#code</a>
+<a href="https://goerli.etherscan.io/address/0x0142F11F8a095917C7c7De90dCD8f927518c8c2A#code">https://goerli.etherscan.io/address/0x0142F11F8a095917C7c7De90dCD8f927518c8c2A#code</a>
 
 ## TOKEN CONTRACT DEPLOYED
 
-<a href="https://kovan.etherscan.io/address/0x9Eb3E2dC2c91130C32A96434e52FdfE248536C30#code">https://kovan.etherscan.io/address/0x9Eb3E2dC2c91130C32A96434e52FdfE248536C30#code</a>
+<a href="https://goerli.etherscan.io/address/0xF872C99a7fAdC291EfDbc67CE2Cc01d3A8ef57f6#code">https://goerli.etherscan.io/address/0xF872C99a7fAdC291EfDbc67CE2Cc01d3A8ef57f6#code</a>
 
 ## CLONE THE PROJECT
 
