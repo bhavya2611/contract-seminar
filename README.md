@@ -1,8 +1,8 @@
-# BANK CONTRACT DEPLOYED
+## BANK CONTRACT DEPLOYED
 
 <a href="https://kovan.etherscan.io/address/0x3cdE4C9b26CC2b746ad13B402486445F1AcdCF50#code">https://kovan.etherscan.io/address/0x3cdE4C9b26CC2b746ad13B402486445F1AcdCF50#code</a>
 
-# TOKEN CONTRACT DEPLOYED
+## TOKEN CONTRACT DEPLOYED
 
 <a href="https://kovan.etherscan.io/address/0x9Eb3E2dC2c91130C32A96434e52FdfE248536C30#code">https://kovan.etherscan.io/address/0x9Eb3E2dC2c91130C32A96434e52FdfE248536C30#code</a>
 
