@@ -6,11 +6,13 @@
 
 <a href="https://kovan.etherscan.io/address/0x9Eb3E2dC2c91130C32A96434e52FdfE248536C30#code">https://kovan.etherscan.io/address/0x9Eb3E2dC2c91130C32A96434e52FdfE248536C30#code</a>
 
-# INSTALL DEPENDENCIES
+## CLONE THE PROJECT
 
 ```shell
-git clone https://github.com/grape404/RCB-BlockchainAus.git
+git clone https://github.com/bhavya2611/contract-seminar.git
 ```
+
+## INSTALL DEPENDENCIES
 
 Enter into the the main folder.
 
@@ -18,13 +20,19 @@ Enter into the the main folder.
 npm install
 ```
 
-# RUN TEST LOCALLY
+## COMPILE THE PROJECT
 
 ```shell
-npx hardhat test
+npm run compile
 ```
 
-# CONFIGURE THE DEPLOYMENT
+## RUN TESTS LOCALLY
+
+```shell
+npm run test
+```
+
+## CONFIGURE THE DEPLOYMENT
 
 In this project, copy the .env.template file to a file named .env, and then edit it to fill in the details. Enter your Etherscan, Polygonscan API key, your Rinkeby and Matic node URL (eg from Alchemy or Infura), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
 
@@ -37,5 +45,11 @@ To get the Etherscan API key, go to
 # DEPLOY ON TESTNET
 
 ```shell
-npx hardhat run --network kovan scripts/deploy.js
+npm run deploy:test
+```
+
+# DEPLOY ON MAINNET
+
+```shell
+npm run deploy:main
 ```

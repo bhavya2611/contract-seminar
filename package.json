@@ -25,5 +25,11 @@
   "dependencies": {
     "@atixlabs/hardhat-time-n-mine": "0.0.5",
     "@openzeppelin/contracts": "^4.3.2"
+  },
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy:test": "npx hardhat run --network goerli scripts/deploy.js",
+    "deploy:main": "npx hardhat run --network mainnet scripts/deploy.js"
   }
 }
