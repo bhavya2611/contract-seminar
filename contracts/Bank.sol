@@ -88,10 +88,10 @@ contract Bank is Ownable, ReentrancyGuard {
     // Updating the FixedDeposit
     // Can only activate or deactivate the fixedDeposit and change minimum deposit
     // Can only be called by owner
-    function updateFixedDeposit(bool _isActive, uint256 _minimumDeposit)
-        external
-        onlyOwner
-    {
+    function updateFixedDeposit(
+        bool _isActive,
+        uint256 _minimumDeposit
+    ) external onlyOwner {
         fixedDepositInfo.isActive = _isActive;
         fixedDepositInfo.minimumDeposit = _minimumDeposit;
     }
@@ -111,7 +111,7 @@ contract Bank is Ownable, ReentrancyGuard {
         require(fixedDepositInfo.isActive, "FixedDeposit is inactive");
         require(_timeInMonths >= 1, "Minimum time one month");
         require(_timeInMonths < 13, "Maximum time twelve months");
-        require(_amount > 0, "Amount has to be greater than zero");
+        require(_amount > 0, "Amount not greater than zero");
         require(
             userInfo[msg.sender].amountDeposited == 0,
             "Deposit already active"
@@ -137,16 +137,22 @@ contract Bank is Ownable, ReentrancyGuard {
             .amountDeposited
             .mul(daysPassed)
             .div(30);
-        if (lockPeriod == 1) {
+        if (lockPeriod >= 1 && lockPeriod < 3) {
             rewards = rewards.mul(fixedDepositInfo.interestOneMonth).div(100);
-        } else if (lockPeriod == 3) {
-            rewards = rewards.mul(fixedDepositInfo.interestThreeMonth).div(3).div(100);
-        } else if (lockPeriod == 6) {
-            rewards = rewards.mul(fixedDepositInfo.interestSixMonth).div(6).div(100);
-        } else if (lockPeriod == 12) {
-            rewards = rewards.mul(fixedDepositInfo.interestTwelveMonth).div(12).div(
+        } else if (lockPeriod >= 3 && lockPeriod < 6) {
+            rewards = rewards
+                .mul(fixedDepositInfo.interestThreeMonth)
+                .div(3)
+                .div(100);
+        } else if (lockPeriod >= 6 && lockPeriod < 12) {
+            rewards = rewards.mul(fixedDepositInfo.interestSixMonth).div(6).div(
                 100
             );
+        } else if (lockPeriod >= 12) {
+            rewards = rewards
+                .mul(fixedDepositInfo.interestTwelveMonth)
+                .div(12)
+                .div(100);
         }
         return rewards;
     }
